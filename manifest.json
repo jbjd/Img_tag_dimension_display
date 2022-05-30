@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Image Dimension Finder",
+    "description": "Finds dimensions of image that cursor is hovering over",
+    "version": "0.1.0",
+    "author": "James Demetris",
+    "offline_enabled": true,
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "/images/icon128.png"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["finder.js"]
+    }],
+    "web_accessible_resources": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "resources": ["script1578213.js"]
+    }],
+    "permissions": ["storage"]
+}
